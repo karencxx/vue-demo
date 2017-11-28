@@ -27,7 +27,9 @@ const mutations = {
 
 	DELETE_NOTE(state){
 		state.notes = state.notes.filter(note => note != state.activeNote)
-		state.activeNote = state.notes[0]
+		if(state.notes[0]){
+			state.activeNote = state.notes[0]
+		}
 	},
 
 	TOGGLE_FAVORITE(state){

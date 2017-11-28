@@ -28,7 +28,7 @@
 				   href="#"
 				   :class="{active: activeNote === note}"
 				   v-on:click="updateActiveNote(note)">
-					<h4 class="list-group=item-heading">{{note.text.trim().substring(0, 30)}} + {{note.favorite}}</h4>   	
+					<h4 class="list-group=item-heading">{{note.text.trim().substring(0, 30)}}</h4>   	
 				</a>
 			</div>
 		</div>
@@ -47,7 +47,6 @@ export default {
 	computed: {
 		...mapGetters(['notes', 'activeNote']),
 		filteredNotes() {
-			console.log(this.notes)
 			if(this.show === 'all') {
 				return this.notes
 			}else if(this.show === 'favorites') {
@@ -95,4 +94,5 @@ export default {
 	button.btn {
 		outline: none !important;
 	}
+
 </style>
