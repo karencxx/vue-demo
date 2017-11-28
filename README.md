@@ -2,6 +2,10 @@
 
 > A Vue.js project
 
+最近在研究vue+vuex的时候，根据国外的一篇文章（如何构建一个笔记的单页应用）进行了练手，从中发现了一些问题也解决了。
+国外文章地址：https://coligo.io/learn-vuex-by-building-notes-app/
+在此记录下。
+
 ## Build Setup
 
 ``` bash
