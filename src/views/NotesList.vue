@@ -1,7 +1,8 @@
 <template>
 	<div id="notes-list">
 		<div id="list-header">
-			<h2> Notes | karen </h2>
+			<h2> Notes | karen  <span class="count-header">{{notes.length}}篇</span></h2>
+			<div>{{activeNoteContent}}</div>
 			<div class="btn-group btn-group-justified" role="group">
 				<!-- All Notes button -->
 				<div class="btn-group" role="group">
@@ -28,7 +29,8 @@
 				   href="#"
 				   :class="{active: activeNote === note}"
 				   v-on:click="updateActiveNote(note)">
-					<h4 class="list-group=item-heading">{{note.text.trim().substring(0, 30)}}</h4>   	
+					<h4 class="list-group=item-heading">{{note.text.trim().substring(0, 30)}}</h4>   
+					<h6 class="">于{{createTime}}创建</h6>	
 				</a>
 			</div>
 		</div>
@@ -45,7 +47,7 @@ export default {
 		}
 	},
 	computed: {
-		...mapGetters(['notes', 'activeNote']),
+		...mapGetters(['notes', 'activeNote', 'createTime', 'count', 'activeNoteContent']),
 		filteredNotes() {
 			if(this.show === 'all') {
 				return this.notes
@@ -84,15 +86,28 @@ export default {
 		width: 80%;
 		margin: 0 auto;
 	}
-
+	
+	.list-group {
+		overflow-y: auto;
+		max-height: 510px;
+		margin-bottom: 0;
+	}
+	
 	.list-group-item {
 		border-radius: 0;
 		border: none;
 		padding: 4px 6px;
+		min-height: 47px;
+		border-bottom: 2px solid #f5f5f5;
 	}
 
 	button.btn {
 		outline: none !important;
+	}
+
+	.count-header {
+		margin-left: 42px;
+		font-size: 18px;
 	}
 
 </style>

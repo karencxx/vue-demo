@@ -35,12 +35,12 @@ export default {
 
 <style lang="less" scoped>
   .narrow {
-      margin-left: -8%;
+      margin-left: -6%;
       transition: margin-left 0.8s ease;
   }
 	#toolbar {
 	    float: left;
-	    width: 8%;
+	    width: 6%;
 	    height: 100%;
 	    display: inline-block;
 	    padding-top: 6%;
@@ -66,7 +66,7 @@ export default {
       }
       .float-chevron {
         position: absolute;
-        right: -6%;
+        right: -12%;
         top: 48%;
         opacity: .6;
         border: 1px solid #d1dbe5;
@@ -77,7 +77,7 @@ export default {
         z-index: 1024;
         width: 25px;
         &.right {
-            right: -24%;
+            right: -28%;
           }
         &:hover {
           text-decoration: none;
