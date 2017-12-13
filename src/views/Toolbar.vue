@@ -1,6 +1,6 @@
 <template>
   <div id="toolbar" :class="{'narrow':!showbar}">
-    <i class="glyphicon glyphicon-grain"></i>
+    <i class="glyphicon glyphicon-tree-deciduous"></i>
     <i @click="addNote" class="glyphicon glyphicon-plus"></i>
     <i @click="toggleFavorite"
       class="glyphicon"
