@@ -3,6 +3,8 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -10,12 +12,12 @@ function resolve (dir) {
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: {
-    app: './src/main.js'
+  entry: { 
+    app: './src/main.js', //指定入口起点
   },
   output: {
     path: config.build.assetsRoot,
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     publicPath: process.env.NODE_ENV === 'production'
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
@@ -27,6 +29,13 @@ module.exports = {
       '@': resolve('src'),
     }
   },
+  devtool: 'inline-source-map',
+  plugins: [
+    new CleanWebpackPlugin(['../dist']),
+    new HtmlWebpackPlugin({
+      title: 'Development'
+    })
+  ],
   module: {
     rules: [
       {

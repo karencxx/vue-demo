@@ -1,18 +1,18 @@
 <template>
 	<div class="content-wrapper">
-		<toolbar></toolbar>
+		<sidebar></sidebar>
     	<notes-list></notes-list>
     	<editor></editor>
 	</div>
 </template>
 <script>
-	import Toolbar from '@/views/Toolbar'
-	import NotesList from '@/views/NotesList'
-	import Editor from '@/views/Editor'
+	import Sidebar from '@/components/Sidebar'
+	import NotesList from '@/components/NotesList'
+	import Editor from '@/components/Editor'
 
 	export default {
 		components: {
-			Toolbar,
+			Sidebar,
 			NotesList,
 			Editor
 		},
@@ -26,5 +26,9 @@
 <style lang="less" scoped>
 	.content-wrapper {
 		height: 100%;
+	}
+	.h1, .h2, .h3, h1, h2, h3 {
+		margin-top: 20px;
+		margin-bottom: 10px;
 	}
 </style>

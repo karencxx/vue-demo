@@ -110,4 +110,9 @@ export default {
 		font-size: 18px;
 	}
 
+	.h1, .h2, .h3, h1, h2, h3 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
 </style>

@@ -1,14 +1,23 @@
 <template>
   <div id="toolbar" :class="{'narrow':!showbar}">
+    <!-- <div class="avatar">
+        <Avatar icon="person" />
+    </div> -->
     <i class="glyphicon glyphicon-tree-deciduous"></i>
     <i @click="addNote" class="glyphicon glyphicon-plus"></i>
     <i @click="toggleFavorite"
       class="glyphicon"
       :class="activeNote.favorite? 'glyphicon-heart' : 'glyphicon-heart-empty'"></i>
     <i @click="deleteNote" class="glyphicon glyphicon-remove"></i>
-
+    <!-- <template v-if="activeNote.favorite">
+      <a @click="toggleFavorite"><Icon type="ios-heart" @click="toggleFavorite"></Icon></a>
+    </template>
+    <template v-else>
+      <a @click="toggleFavorite"><Icon type="ios-heart-outline"></Icon></a>
+    </template> -->
     <a class="float-chevron" v-on:click="toggleBar" v-if="showbar"><i class="glyphicon glyphicon-chevron-left"></i></a>
     <a class="float-chevron right" v-on:click="toggleBar" v-else><i class="glyphicon glyphicon-chevron-right"></i></a>
+    <router-link to="/toolbar">home</router-link>
   </div>
 </template>
 
@@ -36,17 +45,20 @@ export default {
 <style lang="less" scoped>
   .narrow {
       margin-left: -6%;
-      transition: margin-left 0.8s ease;
   }
 	#toolbar {
 	    float: left;
 	    width: 6%;
 	    height: 100%;
 	    display: inline-block;
-	    padding-top: 6%;
+	    padding-top: 3%;
 	    background: #30414D;
 	    color: #E0EEEE;
       position: relative;
+      transition: margin-left 0.8s ease;
+      .avatar {
+        margin: 18% 0;
+      }
 	    i {
 	    	display: block;
 	    	height: 40px;
@@ -59,8 +71,11 @@ export default {
   			&:hover {
   				opacity: 1;
   			}
-        &.glyphicon-heart {
+        &.glyphicon-heart, &.ivu-icon-ios-heart {
           color: #ff3b00;
+        }
+        &.ivu-icon-ios-heart-outline {
+          color: #fff;
         }
 
       }

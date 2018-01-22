@@ -4,10 +4,18 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './vuex/store'
+import directives from './directives/index'
+import iView from 'iview'
+import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
+Vue.config.slient = false //取消Vue所有的日志与警告
 
 Vue.use(router)
+Vue.use(directives)
+Vue.use(iView)
+
+Vue.config.devtools = true
 
 /* eslint-disable no-new */
 new Vue({
@@ -16,5 +24,10 @@ new Vue({
   router,
   // template: '<App/>',
   // components: { App }
-  ...App,
+  render: h => h(App),
 })
+
+//指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和vue实例。
+Vue.config.errorHandler = function(err, vm, info){
+
+}
