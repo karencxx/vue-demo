@@ -7,7 +7,8 @@ import Index from  '@/views/Index'
 import NotFindPage from '@/components/404'
 import Toolbar from '@/components/Toolbar'
 import Model from '@/components/Model'
-
+import Test from '@/test/test'
+import Code from '@/code/code'
 
 Vue.use(Router)
 Vue.use(iView)
@@ -49,6 +50,16 @@ const router = new Router({
 			path: '/mixin',
 			name: 'minxin',
 			component: Model
+		},
+		{
+			path: '/test',
+			name: 'test',
+			component: Test
+		},
+		{
+			path: '/code',
+			name: 'code',
+			component: Code
 		}
 	]
 })
