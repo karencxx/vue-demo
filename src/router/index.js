@@ -1,14 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import iView from 'iview'
-import HelloWorld from '@/components/HelloWorld'
-import Login from '@/Login'
-import Index from  '@/views/Index'
-import NotFindPage from '@/components/404'
-import Toolbar from '@/components/Toolbar'
-import Model from '@/components/Model'
-import Test from '@/test/test'
-import Code from '@/code/code'
+import components from '@/router/components'
 
 Vue.use(Router)
 Vue.use(iView)
@@ -20,12 +13,12 @@ const router = new Router({
 		{
 		  path: '/hello',
 		  name: 'HelloWorld',
-		  component: HelloWorld
+		  component: components.HelloWorld
 		},
 		{
 			path: '/login',
 			name: 'Login',
-			component: Login
+			component: components.Login
 		},
 		{
 			path: '/',
@@ -34,32 +27,42 @@ const router = new Router({
 				title: '标题在此'
 			},
 			alias: '/index', //别名
-			component: Index
+			component: components.Index
 		},
 		{
 			path: '*',
 			name: '404',
-			component: NotFindPage
+			component: components.NotFindPage
 		},
 		{
 			path: '/toolbar',
 			name: 'toolbar',
-			component: Toolbar
+			component: components.Toolbar
 		},
 		{
 			path: '/mixin',
 			name: 'minxin',
-			component: Model
+			component: components.Model
 		},
 		{
 			path: '/test',
 			name: 'test',
-			component: Test
+			component: components.Test
 		},
 		{
 			path: '/code',
 			name: 'code',
-			component: Code
+			component: components.Code
+		},
+		{
+			path: '/scroll-css',
+			name: 'scroll-css',
+			component: components.ScrollCss
+		},
+		{
+			path: '/rate',
+			name: 'rate',
+			component: components.Rate
 		}
 	]
 })

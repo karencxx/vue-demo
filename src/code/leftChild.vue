@@ -57,7 +57,7 @@
 					type: 'table',
 					column: 5,
 					thead: '姓名，性别，年龄',
-					theadClass: 'table,table-hover,table-stripped',
+					theadClass: 'table,table-hover,table-bordered',
 					tbody: 'name, gender, age'
 				},
 				showFormArea: true,
