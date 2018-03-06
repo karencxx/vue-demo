@@ -8,6 +8,7 @@ import Test from '@/test/test'
 import Code from '@/code/code'
 import ScrollCss from '@/exercise/scroll-css'
 import Rate from '@/exercise/Rate'
+import btnHover from '@/exercise/btn-hover'
 
 export default {
 	HelloWorld,
@@ -19,5 +20,6 @@ export default {
 	Test,
 	Code,
 	ScrollCss,
-	Rate
+	Rate,
+	btnHover
 }

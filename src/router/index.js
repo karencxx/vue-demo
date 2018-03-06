@@ -63,6 +63,11 @@ const router = new Router({
 			path: '/rate',
 			name: 'rate',
 			component: components.Rate
+		},
+		{
+			path: '/btn-hover',
+			name: 'btn-hover',
+			component: components.btnHover
 		}
 	]
 })
