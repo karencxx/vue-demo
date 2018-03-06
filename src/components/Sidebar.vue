@@ -17,7 +17,6 @@
     </template> -->
     <a class="float-chevron" v-on:click="toggleBar" v-if="showbar"><i class="glyphicon glyphicon-chevron-left"></i></a>
     <a class="float-chevron right" v-on:click="toggleBar" v-else><i class="glyphicon glyphicon-chevron-right"></i></a>
-    <router-link to="/toolbar">home</router-link>
   </div>
 </template>
 

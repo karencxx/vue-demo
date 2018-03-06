@@ -10,64 +10,79 @@ console.log('======', 'router/index')
 const router = new Router({
 	mode: 'history', // H5 history API
 	routes: [
-		{
-		  path: '/hello',
-		  name: 'HelloWorld',
-		  component: components.HelloWorld
-		},
+		// {
+		//   path: '/hello',
+		//   name: 'HelloWorld',
+		//   component: components.HelloWorld
+		// },
 		{
 			path: '/login',
-			name: 'Login',
+			name: 'login',
+			alias: '登录页面',
 			component: components.Login
 		},
 		{
 			path: '/',
 			name: 'index',
 			meta: {
-				title: '标题在此'
+				title: '目录页'
 			},
-			alias: '/index', //别名
-			component: components.Index
+			alias: '目录页面', //别名
+			component: components.Home
 		},
 		{
 			path: '*',
 			name: '404',
+			alias: '404页面',
 			component: components.NotFindPage
+		},
+		{
+			path: '/note',
+			name: 'note',
+			alias: '笔记',
+			component: components.Note
 		},
 		{
 			path: '/toolbar',
 			name: 'toolbar',
+			alias: '超简易工具栏',
 			component: components.Toolbar
 		},
 		{
 			path: '/mixin',
-			name: 'minxin',
+			name: 'mixin',
+			alias: '混入mixin',
 			component: components.Model
 		},
 		{
 			path: '/test',
 			name: 'test',
+			alias: '测试页面',
 			component: components.Test
 		},
 		{
 			path: '/code',
 			name: 'code',
+			alias: '简易代码工具',
 			component: components.Code
 		},
-		{
-			path: '/scroll-css',
-			name: 'scroll-css',
-			component: components.ScrollCss
-		},
+		// {
+		// 	path: '/scroll-css',
+		// 	name: 'scroll-css',
+		// 	alias: '',
+		// 	component: components.ScrollCss
+		// },
 		{
 			path: '/rate',
 			name: 'rate',
+			alias: '评价练习',
 			component: components.Rate
 		},
 		{
 			path: '/btn-hover',
 			name: 'btn-hover',
-			component: components.btnHover
+			alias: '炫酷按钮',
+			component: components.BtnHover
 		}
 	]
 })

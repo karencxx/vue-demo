@@ -1,6 +1,6 @@
 import HelloWorld from '@/components/HelloWorld'
 import Login from '@/Login'
-import Index from  '@/views/Index'
+import Note from  '@/views/Note'
 import NotFindPage from '@/components/404'
 import Toolbar from '@/components/Toolbar'
 import Model from '@/components/Model'
@@ -8,12 +8,13 @@ import Test from '@/test/test'
 import Code from '@/code/code'
 import ScrollCss from '@/exercise/scroll-css'
 import Rate from '@/exercise/Rate'
-import btnHover from '@/exercise/btn-hover'
+import BtnHover from '@/exercise/btn-hover'
+import Home from '@/views/Home'
 
 export default {
 	HelloWorld,
 	Login,
-	Index,
+	Note,
 	NotFindPage,
 	Toolbar,
 	Model,
@@ -21,5 +22,6 @@ export default {
 	Code,
 	ScrollCss,
 	Rate,
-	btnHover
+	BtnHover,
+	Home,
 }
