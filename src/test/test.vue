@@ -37,6 +37,8 @@
 			<p>fff2</p>	
 			<p>fff3</p>	
 		</div>
+		<p>{{arr[0]}}</p>
+		<Button type="info" size="small" @click="add">test</Button>
 	</div>
 </template>
 <script>
@@ -49,7 +51,8 @@
 				str: null,
 				strSplit1: null,
 				strSplit2: null,
-				strSplit3: null
+				strSplit3: null,
+				arr: [0]
 			}
 		},
 		created() {
@@ -97,6 +100,10 @@
 					this.strSplit2 = this.strSplit1.map(v => v.trim());//去首尾空格
 					this.strSplit3 = this.strSplit2.filter((val) => val);
 				}
+			},
+			add() {
+				this.arr.unshift(Math.random()*9)
+				console.log(this.arr)
 			}
 		}
 	}

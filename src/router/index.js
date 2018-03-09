@@ -75,7 +75,7 @@ const router = new Router({
 		{
 			path: '/rate',
 			name: 'rate',
-			alias: '评价练习',
+			alias: '✨评价练习',
 			component: components.Rate
 		},
 		{
