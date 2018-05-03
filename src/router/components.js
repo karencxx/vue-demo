@@ -10,6 +10,8 @@ import ScrollCss from '@/exercise/scroll-css'
 import Rate from '@/exercise/Rate'
 import BtnHover from '@/exercise/btn-hover'
 import Home from '@/views/Home'
+import Panorama from '@/exercise/panorama'
+import Scroll from '@/exercise/scroll'
 
 export default {
 	HelloWorld,
@@ -24,4 +26,6 @@ export default {
 	Rate,
 	BtnHover,
 	Home,
+	Panorama,
+	Scroll,
 }

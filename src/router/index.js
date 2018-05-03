@@ -83,7 +83,20 @@ const router = new Router({
 			name: 'btn-hover',
 			alias: '炫酷按钮',
 			component: components.BtnHover
-		}
+		},
+		{
+			path: '/panorama',
+			name: 'panorama',
+			alias: '全景图',
+			component: components.Panorama
+		},
+		{
+			path: '/scroll',
+			name: 'scroll',
+			alias: '上移置顶',
+			component: components.Scroll
+		},
+
 	]
 })
 
