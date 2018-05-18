@@ -12,6 +12,8 @@ import BtnHover from '@/exercise/btn-hover'
 import Home from '@/views/Home'
 import Panorama from '@/exercise/panorama'
 import Scroll from '@/exercise/scroll'
+import Myh5 from '@/exercise/myh5'
+import MockDemo from '@/exercise/mockDemo'
 
 export default {
 	HelloWorld,
@@ -28,4 +30,6 @@ export default {
 	Home,
 	Panorama,
 	Scroll,
+	Myh5,
+	MockDemo,
 }

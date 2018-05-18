@@ -96,7 +96,18 @@ const router = new Router({
 			alias: '上移置顶',
 			component: components.Scroll
 		},
-
+		// {
+		// 	path: '/myh5',
+		// 	name: 'myh5',
+		// 	alias: '移动web',
+		// 	component: components.Myh5
+		// },
+		{
+			path: '/mock',
+			name: 'mock',
+			alias: 'mock',
+			component: components.MockDemo
+		},
 	]
 })
 

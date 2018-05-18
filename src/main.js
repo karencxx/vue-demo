@@ -6,14 +6,19 @@ import router from './router'
 import store from './vuex/store'
 import directives from './directives/index'
 import iView from 'iview'
+import axios from 'axios'
 import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
 Vue.config.slient = false //取消Vue所有的日志与警告
 
+require('./mock.js') //引入mock.js
+Vue.prototype.$http = axios
+
 Vue.use(router)
 Vue.use(directives)
 Vue.use(iView)
+
 
 Vue.config.devtools = true
 
