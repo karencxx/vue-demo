@@ -24,5 +24,41 @@ const producerNewsData = function() {
 	}
 }
 
+//弹幕数据
+const producerBarrage = function() {
+	let arr = [];
+	for(let i = 0; i < 50; i++) {
+		let str = `${Random.first()}刚刚买了`;
+		arr.push(str);
+	}
+
+	return {
+		list: arr
+	}
+}
+
+//滚动数据
+const producerCarousel = function() {
+	let arr = [];
+	for(let i = 0; i < 10; i++) {
+		let obj = {
+			name: Random.first(),
+			time: Random.time('HH:mm:ss'),
+			from: Random.province()
+		};
+		arr.push(obj);
+	}
+
+	return {
+		list: arr
+	}
+}
+
 // Mock.mock( url, post/get, 返回的数据)
 Mock.mock('/news/index', 'post', producerNewsData);
+Mock.mock('/barrage/get', 'post', producerBarrage);
+Mock.mock('/carousel/get', 'post', producerCarousel);
+
+
+
+
