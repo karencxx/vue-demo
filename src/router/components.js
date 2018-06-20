@@ -14,6 +14,7 @@ import Panorama from '@/exercise/panorama'
 import Scroll from '@/exercise/scroll'
 import Myh5 from '@/exercise/myh5'
 import MockDemo from '@/exercise/mockDemo'
+import Data from '@/code/mockData'
 
 export default {
 	HelloWorld,
@@ -32,4 +33,5 @@ export default {
 	Scroll,
 	Myh5,
 	MockDemo,
+	Data,
 }

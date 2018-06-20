@@ -5,12 +5,12 @@
 				<p>{{item}}</p>
 			</template>	 -->
       <!-- https://github.com/jinht/Marquee -->
-      <span class="barrage" :class="showTxt ? 'in' : 'out'">{{showTxt}}</span>
-      <Carousel v-model="first" autoplay loop dots="none">
+      <span class="barrage" :class="cname">{{showTxt}}</span>
+      <!-- <Carousel v-model="first" autoplay loop dots="none">
         <CarouselItem v-for="(item, index) in carouselList">
           <div class="demo-carousel">{{index}}</div>
         </CarouselItem>
-      </Carousel>
+      </Carousel> -->
       <div class="carousel-section">
 	      <div class="carousel-wrapper" :style="{'margin-top': top}">
 		      <template v-for="(item, index) in carouselList">
@@ -21,6 +21,7 @@
 		      </template>
 	      </div>
       </div>
+      <button @click="clearTimer()">清除</button>
     </div>
   </div>
 </template>
@@ -35,7 +36,9 @@ export default {
       carouselList: [],
       first: 0,
       curIndex: 0,
-      top: 0
+      top: 0,
+      timer: 0,
+      cname: false
     }
   },
   created() {
@@ -53,10 +56,11 @@ export default {
         })
     },
     setBarrageData() {
+      let that = this;
       api.JH_news('/barrage/get', '')
         .then(res => {
           this.barrageList = res.list;
-          this.showDiffTxt();
+          that.showDiffTxt();
         })
     },
     setCarouselListData() {
@@ -66,14 +70,31 @@ export default {
         })
     },
     showDiffTxt() {
+      console.log('ininin===')
       let that = this;
-      setInterval(function() {
+      /*this.timer = setInterval(function() {
         setTimeout(function() {
           that.showTxt = '';
         }, 2000)
         let s = Math.floor(Math.random() * 50);
         that.showTxt = that.barrageList[s];
-      }, 5000)
+      }, 4000)*/
+      console.log('----')
+      that.timer = setTimeout(show, 5000);
+      function show() {
+        console.log('====')
+          that.cname = 'in';
+          let s = Math.floor(Math.random() * 50);
+          that.showTxt = that.barrageList[s];
+          that.timer = setTimeout(hide, 2000);
+      }
+      function hide() {
+        that.cname = 'out';
+        that.timer = setTimeout(show, 2000);
+      }
+      function stopInterval() {
+          clearTimeout(interval);
+      }
     },
     autoCarousel() {
     	let that = this;
@@ -91,7 +112,15 @@ export default {
     },
     ho() {
     	console.log('jo')
-    }
+    },
+    clearTimer() {
+      clearInterval(this.timer)
+    },
+    doCarousel() {
+      let s = Math.floor(Math.random() * 50);
+      this.showTxt = this.barrageList[s];
+      this.timer = setTimeout
+    },
   }
 }
 
@@ -103,13 +132,15 @@ export default {
   top: 4.3rem;
   z-index: 900;
   padding: 0.02rem 0;
-  background: rgba(255, 255, 255, 0.9);
-  color: #222;
   border-radius: 0.15rem;
   font-size: 16px;
   line-height: 0.14rem;
   opacity: 0;
   box-shadow: 1px 1px 3px #ccc;
+  background: rgba(0, 0, 0, 0.7);
+  height: 20px;
+  color: #fff;
+  line-height: 20px;
   &.in {
     animation: in 0.5s linear 0s 1 none;
     animation-fill-mode: forwards;
@@ -122,7 +153,7 @@ export default {
 
 @-webkit-keyframes in {
   from {
-    transform: transLateY(0.1rem);
+    transform: transLateY(10px);
     opacity: 0;
   }
   to {
@@ -137,7 +168,7 @@ export default {
     opacity: 1;
   }
   to {
-    transform: transLateY(-0.1rem);
+    transform: transLateY(-10px);
     opacity: 0;
   }
 }
