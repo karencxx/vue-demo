@@ -15,6 +15,7 @@ import Scroll from '@/exercise/scroll'
 import Myh5 from '@/exercise/myh5'
 import MockDemo from '@/exercise/mockDemo'
 import Data from '@/code/mockData'
+import Css from '@/code/css'
 
 export default {
 	HelloWorld,
@@ -34,4 +35,5 @@ export default {
 	Myh5,
 	MockDemo,
 	Data,
+	Css,
 }

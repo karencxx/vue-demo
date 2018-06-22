@@ -114,6 +114,12 @@ const router = new Router({
 			alias: 'mock_data',
 			component: components.Data
 		},
+		{
+			path: '/css',
+			name: 'css',
+			alias: 'css',
+			component: components.Css
+		},
 
 	]
 })

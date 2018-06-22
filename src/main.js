@@ -7,6 +7,7 @@ import store from './vuex/store'
 import directives from './directives/index'
 import iView from 'iview'
 import axios from 'axios'
+import configComponents from './config-components' 
 import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
@@ -18,7 +19,7 @@ Vue.prototype.$http = axios
 Vue.use(router)
 Vue.use(directives)
 Vue.use(iView)
-
+configComponents(Vue) //全局注册component
 
 Vue.config.devtools = true
 
