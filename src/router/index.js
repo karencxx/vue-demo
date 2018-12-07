@@ -120,7 +120,12 @@ const router = new Router({
 			alias: 'css',
 			component: components.Css
 		},
-
+		{
+			path: '/loading-animation',
+			name: 'loading-animation',
+			alias: 'loading动画',
+			component: components.LoadingAnimation
+		}
 	]
 })
 

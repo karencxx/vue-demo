@@ -22,7 +22,6 @@
 		},
 		created() {
 			this.list = router.options.routes;
-			console.log(this.num, 'num')
 		} 
 	}
 

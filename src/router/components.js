@@ -16,6 +16,7 @@ import Myh5 from '@/exercise/myh5'
 import MockDemo from '@/exercise/mockDemo'
 import Data from '@/code/mockData'
 import Css from '@/code/css'
+import LoadingAnimation from '@/exercise/loading-animation'
 
 export default {
 	HelloWorld,
@@ -36,4 +37,5 @@ export default {
 	MockDemo,
 	Data,
 	Css,
+	LoadingAnimation
 }
