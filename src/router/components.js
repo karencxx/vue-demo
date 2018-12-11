@@ -7,16 +7,17 @@ import Model from '@/components/Model'
 import Test from '@/test/test'
 import Code from '@/code/code'
 import ScrollCss from '@/exercise/scroll-css'
-import Rate from '@/exercise/Rate'
-import BtnHover from '@/exercise/btn-hover'
 import Home from '@/views/Home'
-import Panorama from '@/exercise/panorama'
-import Scroll from '@/exercise/scroll'
+import Rate from '@/exercise/css/rate'
+import Panorama from '@/exercise/css/panorama'
+import BtnHover from '@/exercise/css/btnHover'
+import Scroll from '@/exercise/css/scroll'
+import LoadingAnimation from '@/exercise/css/loadingAnimation'
 import Myh5 from '@/exercise/myh5'
 import MockDemo from '@/exercise/mockDemo'
 import Data from '@/code/mockData'
 import Css from '@/code/css'
-import LoadingAnimation from '@/exercise/loading-animation'
+import cssIndex from '@/views/css'
 
 export default {
 	HelloWorld,
@@ -37,5 +38,6 @@ export default {
 	MockDemo,
 	Data,
 	Css,
-	LoadingAnimation
+	LoadingAnimation,
+	cssIndex
 }

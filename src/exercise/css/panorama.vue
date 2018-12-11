@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section>全景图
 		<div class="panorama"></div>
 	</section>
 </template>
@@ -7,7 +7,7 @@
 	.panorama {
 		width: 300px;
 		height: 300px;
-		background-image: url('../assets/demo.png');
+		background-image: url('../../assets/demo.png');
 		background-size: auto 100%; /*图片等高于容器的高,且水平方向自动,即最左边贴着容器左侧*/
 		cursor: pointer;
 		animation: panorama 8s linear infinite alternate;

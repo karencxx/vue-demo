@@ -31,6 +31,14 @@ const router = new Router({
 			component: components.Home
 		},
 		{
+			path: '/cssIndex',
+			name: 'cssIndex',
+			meta: {
+				title: 'css练习专栏'
+			},
+			component: components.cssIndex
+		},
+		{
 			path: '*',
 			name: '404',
 			alias: '404页面',
