@@ -12,12 +12,15 @@ import Rate from '@/exercise/css/rate'
 import Panorama from '@/exercise/css/panorama'
 import BtnHover from '@/exercise/css/btnHover'
 import Scroll from '@/exercise/css/scroll'
+import Roller from '@/exercise/css/roller'
 import LoadingAnimation from '@/exercise/css/loadingAnimation'
+import Airplane from '@/exercise/css/airplane'
 import Myh5 from '@/exercise/myh5'
 import MockDemo from '@/exercise/mockDemo'
 import Data from '@/code/mockData'
 import Css from '@/code/css'
 import cssIndex from '@/views/css'
+import Bezier from '@/exercise/css/bezier'
 
 export default {
 	HelloWorld,
@@ -39,5 +42,7 @@ export default {
 	Data,
 	Css,
 	LoadingAnimation,
-	cssIndex
+	cssIndex,
+	Roller,
+	Bezier
 }

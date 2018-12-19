@@ -133,6 +133,18 @@ const router = new Router({
 			name: 'loading-animation',
 			alias: 'loading动画',
 			component: components.LoadingAnimation
+		}, 
+		{
+			path:'/roller',
+			name: 'roller',
+			alias: '过山车动画',
+			component: components.Roller
+		},
+		{
+			path: '/bezier',
+			name: 'bezier',
+			alias: '曲线动效',
+			component: components.Bezier
 		}
 	]
 })
