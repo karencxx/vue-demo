@@ -151,6 +151,12 @@ const router = new Router({
 			name: 'mintCandy',
 			alias: '薄荷糖动画',
 			component: components.MintCandy
+		}, 
+		{
+			path: '/navHover',
+			name: 'navHover',
+			alias: '从按钮两侧滑入装饰元素的悬停特效',
+			component: components.NavHover
 		}
 	]
 })

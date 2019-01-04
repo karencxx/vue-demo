@@ -22,6 +22,7 @@ import Css from '@/code/css'
 import cssIndex from '@/views/css'
 import Bezier from '@/exercise/css/bezier'
 import MintCandy from '@/exercise/css/mintCandy'
+import NavHover from '@/exercise/css/navHover'
 
 export default {
 	HelloWorld,
@@ -46,5 +47,6 @@ export default {
 	cssIndex,
 	Roller,
 	Bezier,
-	MintCandy
+	MintCandy,
+	NavHover
 }
