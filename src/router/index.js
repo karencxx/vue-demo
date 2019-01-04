@@ -145,6 +145,12 @@ const router = new Router({
 			name: 'bezier',
 			alias: '曲线动效',
 			component: components.Bezier
+		},
+		{
+			path: '/mint',
+			name: 'mintCandy',
+			alias: '薄荷糖动画',
+			component: components.MintCandy
 		}
 	]
 })

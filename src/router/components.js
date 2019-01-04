@@ -21,6 +21,7 @@ import Data from '@/code/mockData'
 import Css from '@/code/css'
 import cssIndex from '@/views/css'
 import Bezier from '@/exercise/css/bezier'
+import MintCandy from '@/exercise/css/mintCandy'
 
 export default {
 	HelloWorld,
@@ -44,5 +45,6 @@ export default {
 	LoadingAnimation,
 	cssIndex,
 	Roller,
-	Bezier
+	Bezier,
+	MintCandy
 }
