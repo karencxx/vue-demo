@@ -16,6 +16,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "html-webpack-plugin": "^2.30.1",
     "iview": "^2.14.3",
+    "mobx": "^5.9.0",
     "splitting": "^1.0.6",
     "vue": "^2.5.17",
     "vue-router": "^3.0.2",

@@ -157,6 +157,12 @@ const router = new Router({
 			name: 'navHover',
 			alias: '从按钮两侧滑入装饰元素的悬停特效',
 			component: components.NavHover
+		},
+		{
+			path: '/openPopup',
+			name: 'openPopup',
+			alias: '打开内容弹窗样式',
+			component: components.openPopup
 		}
 	]
 })
