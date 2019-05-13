@@ -163,6 +163,18 @@ const router = new Router({
 			name: 'openPopup',
 			alias: '打开内容弹窗样式',
 			component: components.openPopup
+		},
+		{
+			path: '/cssModules',
+			name: 'cssModules',
+			alias: 'css-modules',
+			component: components.cssModules
+		},
+		{
+			path: '/ripples',
+			name: 'ripples',
+			alias: '水波荡漾',
+			component: components.Ripples
 		}
 	]
 })

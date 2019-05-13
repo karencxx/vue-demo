@@ -24,6 +24,8 @@ import Bezier from '@/exercise/css/bezier'
 import MintCandy from '@/exercise/css/mintCandy'
 import NavHover from '@/exercise/css/navHover'
 import openPopup from '@/exercise/css/openPopup'
+import cssModules from '@/exercise/css-modules'
+import Ripples from '@/exercise/css/ripples'
 
 export default {
 	HelloWorld,
@@ -50,5 +52,7 @@ export default {
 	Bezier,
 	MintCandy,
 	NavHover,
-	openPopup
+	openPopup,
+	cssModules,
+	Ripples
 }
