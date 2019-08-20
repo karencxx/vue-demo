@@ -42,6 +42,7 @@ div.wrap {
 			animation: 1.6s linear infinite;
 			animation-name: animate-border-width, animate-border-color, animate-scale;
 		}
+		/* after慢半拍 */
 		&::after {
 			animation-delay: -0.8s;
 		}
@@ -66,7 +67,7 @@ div.wrap {
 		transform: rotate(calc(-135deg + 90deg*4));
 	}
 }
-
+/* 增加子元素边框宽度变化的动画 */
 @keyframes animate-border-width {
 	0%, 100% {
 		border-width: 0.1rem;
@@ -75,7 +76,7 @@ div.wrap {
 		border-width: 1.5em;
 	}
 }
-
+/* 增加子元素边框色变化的动画 */
 @keyframes animate-border-color {
 	0%, 25% {
 		border-color: tomato;
@@ -87,7 +88,7 @@ div.wrap {
 		border-color: #000;
 	}
 }
-
+/* 增加子元素尺寸由小到大变化的动画 */
 @keyframes animate-scale {
 	from {
 		width: 1%;

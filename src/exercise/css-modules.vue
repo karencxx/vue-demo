@@ -3,6 +3,10 @@
 		<p :class="a.red">css modules</p>
 		<p class="bg777">css modules 全局</p>
 		<p :class="b.bg">css modules</p>
+		<div class="center">
+			<p class="p1">使用transla tex/y定位中心</p>
+			<p>使用transla tex/y定位中心</p>
+		</div>
 	</div>
 </template>
 <script>
@@ -34,5 +38,20 @@
 	/* 注入标识符 b */
 	.bg {
 		background: #999;
+	}
+</style>
+<style lang="less" scoped>
+	.center {
+		position: relative;
+		height: 50vh;
+		border: 1px solid;
+		p {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			&.p1 {
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
 	}
 </style>
