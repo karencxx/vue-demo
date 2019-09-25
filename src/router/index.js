@@ -175,6 +175,18 @@ const router = new Router({
 			name: 'ripples',
 			alias: '水波荡漾',
 			component: components.Ripples
+		}, 
+		{
+			path: '/math',
+			name: 'math',
+			alias: '算术',
+			component: components.Math
+		},
+		{
+			path: '/lottie',
+			name: 'lottie',
+			alias: 'lottie动画',
+			component: components.Lottie
 		}
 	]
 })

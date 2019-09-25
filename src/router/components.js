@@ -26,6 +26,8 @@ import NavHover from '@/exercise/css/navHover'
 import openPopup from '@/exercise/css/openPopup'
 import cssModules from '@/exercise/css-modules'
 import Ripples from '@/exercise/css/ripples'
+import Math from '@/exercise/math'
+import Lottie from '@/exercise/lottie'
 
 export default {
 	HelloWorld,
@@ -54,5 +56,7 @@ export default {
 	NavHover,
 	openPopup,
 	cssModules,
-	Ripples
+	Ripples,
+	Math,
+	Lottie
 }

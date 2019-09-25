@@ -4,8 +4,8 @@
 		<p class="bg777">css modules 全局</p>
 		<p :class="b.bg">css modules</p>
 		<div class="center">
-			<p class="p1">使用transla tex/y定位中心</p>
-			<p>使用transla tex/y定位中心</p>
+			<p class="p1">使用translate x/y定位中心</p>
+			<p>使用translate x/y定位中心</p>
 		</div>
 	</div>
 </template>
@@ -22,6 +22,9 @@
 	}
 </script>
 <style module="a">
+	/* CSS Modules对CSS中的class类都做了处理，使用对象来保存原class和定制处理后的class的对应关系 */
+	/* 经过这样类名定制处理后，class名基本就是唯一的，大大降低了项目中样式覆盖的几率 */
+	/* 只会转换class名相关样式 */
 	/* 注入标识符 b */
 	.bg777 {
 		background: lightblue; 
@@ -30,8 +33,14 @@
 		background: #000;
 	}
 	.red {
-		composes: bg777;
+		/* 继承 组合class */
+		composes: bg777; 
 		color: red;
+	}
+
+	/* :export 把css变量输出到js中 */
+	:export {
+		primaryColor: #000;
 	}
 </style>
 <style module="b">
