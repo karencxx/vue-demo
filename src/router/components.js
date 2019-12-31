@@ -28,7 +28,8 @@ import cssModules from '@/exercise/css-modules'
 import Ripples from '@/exercise/css/ripples'
 import Math from '@/exercise/math'
 import Lottie from '@/exercise/lottie'
-
+import review from '@/review'
+import Charging from '@/exercise/css/charging'
 export default {
 	HelloWorld,
 	Login,
@@ -58,5 +59,7 @@ export default {
 	cssModules,
 	Ripples,
 	Math,
-	Lottie
+	Lottie,
+	review,
+	Charging
 }

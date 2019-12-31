@@ -187,6 +187,18 @@ const router = new Router({
 			name: 'lottie',
 			alias: 'lottie动画',
 			component: components.Lottie
+		},
+		{
+			path: '/review',
+			name: 'review',
+			alias: '温故而知新',
+			component: components.review
+		},
+		{
+			path: '/charge',
+			name: 'charge',
+			alias: '苹果充电线',
+			component: components.Charging
 		}
 	]
 })

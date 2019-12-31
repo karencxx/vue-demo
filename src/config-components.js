@@ -7,7 +7,7 @@ export default function(Vue) {
   componentsList.forEach(function(item, index) {
     // let url = './global-components/' + item.name + '.vue';
     // require(url);
-    //上面的写法会报错,url被认为是字符串,应此不能被解析
+    //上面的写法会报错,url被认为是字符串,因此不能被解析
 
     /**
      * add the require .default
