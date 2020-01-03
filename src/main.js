@@ -26,12 +26,12 @@ Vue.config.devtools = true
 /* eslint-disable no-new */
 new Vue({
   store, //inject store to all children
-  el: '#app',
+  // el: '#app',
   router,
   // template: '<App/>',
   // components: { App }
   render: h => h(App),
-})
+}).$mount('#app')
 
 //指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和vue实例。
 Vue.config.errorHandler = function(err, vm, info){

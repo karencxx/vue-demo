@@ -2,7 +2,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/Login'
 import Note from  '@/views/Note'
 import NotFindPage from '@/components/404'
-import Toolbar from '@/components/Toolbar'
+// import easyToolbar from '@/components/easyToolbar'
 import Model from '@/components/Model'
 import Test from '@/test'
 import Code from '@/code/code'
@@ -35,7 +35,7 @@ export default {
 	Login,
 	Note,
 	NotFindPage,
-	Toolbar,
+	// easyToolbar,
 	Model,
 	Test,
 	Code,
@@ -61,5 +61,6 @@ export default {
 	Math,
 	Lottie,
 	review,
-	Charging
+	Charging,
+	Airplane
 }

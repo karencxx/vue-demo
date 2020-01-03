@@ -51,10 +51,10 @@ const router = new Router({
 			component: components.Note
 		},
 		{
-			path: '/toolbar',
-			name: 'toolbar',
+			path: '/easyToolbar',
+			name: 'easyToolbar',
 			alias: '超简易工具栏',
-			component: components.Toolbar
+			component: components.easyToolbar
 		},
 		{
 			path: '/mixin',

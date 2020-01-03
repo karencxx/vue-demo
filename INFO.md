@@ -1,6 +1,6 @@
 # 项目结构
 
->build -- webpack相关配置
+>build -- webpack相关配置 cli3 已移除
 ```bash
  build.js -- webpack打包配置文件
  check-version.js -- 检查npm,nodejs版本
@@ -26,7 +26,7 @@
 
 >package.json -- node配置文件
 
->.babelrc -- babel配置文件
+>.babelrc -- babel配置文件 cli3 已移除
 
 >.editorconfig -- 编辑器配置
 

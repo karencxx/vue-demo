@@ -4,7 +4,7 @@
 			<template>
 			    <Select v-model="fSize" class="font-select">
 			    	<template v-for="(item,index) in fontList">
-			        	<Option :value="item">{{item}}</Option>
+			        	<Option :value="item" :key="index">{{item}}</Option>
 			    	</template>
 			    </Select>
 				<ColorPicker v-model="fColor" recommend />
