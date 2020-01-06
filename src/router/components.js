@@ -2,7 +2,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/Login'
 import Note from  '@/views/Note'
 import NotFindPage from '@/components/404'
-// import easyToolbar from '@/components/easyToolbar'
+// toolbar 名字有冲突
+import easyToolbar from '@/components/easyTb'
 import Model from '@/components/Model'
 import Test from '@/test'
 import Code from '@/code/code'
@@ -35,7 +36,7 @@ export default {
 	Login,
 	Note,
 	NotFindPage,
-	// easyToolbar,
+	easyToolbar,
 	Model,
 	Test,
 	Code,
