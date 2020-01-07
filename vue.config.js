@@ -7,6 +7,8 @@ module.exports = {
     devServer: {
         port: 8080,
         proxy: '', //设置代理
+        inline: true, // 实时刷新
+        hot: true
     },
     css: {
         modules: false, // 启用css modules

@@ -199,6 +199,12 @@ const router = new Router({
 			name: 'charge',
 			alias: '苹果充电线',
 			component: components.Charging
+		},
+		{
+			path: '/collection',
+			name: 'collection',
+			alias: '集合',
+			component: components.Collection
 		}
 	]
 })

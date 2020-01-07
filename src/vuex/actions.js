@@ -22,3 +22,5 @@ export const updateActiveNote = ({ commit }, note) => {
 }
 
 export const toggleFavorite = makeAction('TOGGLE_FAVORITE')
+
+// action 异步操作

@@ -31,6 +31,7 @@ import Math from '@/exercise/math'
 import Lottie from '@/exercise/lottie'
 import review from '@/review'
 import Charging from '@/exercise/css/charging'
+import Collection from '@/exercise/css/collection'
 export default {
 	HelloWorld,
 	Login,
@@ -63,5 +64,6 @@ export default {
 	Lottie,
 	review,
 	Charging,
-	Airplane
+	Airplane,
+	Collection
 }
