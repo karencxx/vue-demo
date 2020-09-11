@@ -5,11 +5,14 @@
 		<input type="checkbox" class="toggle">
 		<figure class="window">
 			<div class="curtain"></div>
-			<div class="clouds">
+			<!-- <div class="clouds">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
+			</div> -->
+			<div class="snow">
+
 			</div>
 		</figure>
 	</section>
@@ -17,6 +20,7 @@
 <style lang="less" scoped>
 section {
 	margin: 0;
+	width: 100vw;
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -123,8 +127,21 @@ section {
 			top: 20%;
 			border-radius: 4em;
 			/* 增加云朵飘动的效果 */
-			animation: move 4s linear infinite;
+			// animation: move 4s linear infinite;
 		}
+	}
+	/* 雪花容器 */
+	.snow {
+		display: grid;
+		height: 100%;
+    	width: 100%;
+		background-size: 2em 2em;
+        background-image: 
+            linear-gradient(to bottom, transparent 95%, pink 95%),
+            linear-gradient(to right, transparent 95%, pink 95%),
+            linear-gradient(to top, transparent 95%, pink 95%),
+            linear-gradient(to left, transparent 95%, pink 95%);
+        background-repeat: repeat, repeat, repeat-x, repeat-y;
 	}
 }
 @keyframes move {

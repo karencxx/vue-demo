@@ -12,7 +12,7 @@ module.exports = {
     },
     css: {
         modules: false, // 启用css modules
-        extract: true, // 是否使用css分离插件
+        // extract: true, // 是否使用css分离插件
         sourceMap: false,
         loaderOptions: {
             less: {

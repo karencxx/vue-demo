@@ -20,6 +20,59 @@
                 <span class="text year">year</span>
             </figure>
         </div>
+        <div class="c3">
+            <figure class="snow-flake">
+                <!-- 雪花的6个花瓣 -->
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <!-- 雪花上的 -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </figure>
+        </div>
     </section>
 </template>
 <style lang="less" scoped>
@@ -118,9 +171,102 @@ body {
     }
 }
 
+.c3 {
+    width: 13em;
+    height: 13em;
+    margin-top: 10px;
+    padding: 0.5em;
+    background-color: #000;
+    box-sizing: border-box;
+    .snow-flake {
+        position: relative;
+        width: 6em;
+        height: 6em;
+        margin: 0 auto;
+        color: snow;
+        animation: round-snow 10s linear infinite;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 0.2em;
+        height: 3em;
+        left: 50%;
+        background-color: currentColor;
+        border-radius: 0.05em;
+        transform-origin: bottom;
+        transform: rotate(calc((var(--n) - 1) * 60deg));
+
+        &:nth-child(1) {
+            --n: 1;
+        }
+        &:nth-child(2) {
+            --n: 2;
+        }
+        &:nth-child(3) {
+            --n: 3;
+        }
+        &:nth-child(4) {
+            --n: 4;
+        }
+        &:nth-child(5) {
+            --n: 5;
+        }
+        &:nth-child(6) {
+            --n: 6;
+        }
+
+        span:nth-child(1) {
+            width: 0.4em;
+            height: 0.4em;
+            background-color: currentColor;
+            border-radius: 100%;
+        }
+
+        span:nth-child(2),
+        span:nth-child(3),
+        span:nth-child(4),
+        span:nth-child(5) {
+            width: var(--side-length);
+            height: var(--side-length);
+            border: 0.2em solid;
+            border-width: 0.2em;
+            border-style: none solid solid none;
+            border-radius: 0.05em;
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(2) { 
+            --side-length: 1em;
+            margin-top: -0.2em;
+        }
+
+        span:nth-child(3) { 
+            --side-length: 0.8em;
+        }
+
+        span:nth-child(4) { 
+            --side-length: 0.6em;
+        }
+
+        span:nth-child(5) { 
+            --side-length: 0.4em;
+        }
+    }
+}
+
 @keyframes round {
     to {
         transform: rotate(calc(-45deg + -1turn));
+    }
+}
+
+@keyframes round-snow {
+    to {
+        transform: rotate(1turn);
     }
 }
 </style>

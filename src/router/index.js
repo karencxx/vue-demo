@@ -201,10 +201,28 @@ const router = new Router({
 			component: components.Charging
 		},
 		{
+			path: '/airplane',
+			name: 'airplane',
+			alias: '飞机窗',
+			component: components.Airplane
+		},
+		{
 			path: '/collection',
 			name: 'collection',
 			alias: '集合',
 			component: components.Collection
+		},
+		{
+			path: '/border',
+			name: 'border',
+			alias: '边框集合',
+			component: components.Border
+		},
+		{
+			path: '/question',
+			name: 'question',
+			alias: '50个css基础问题',
+			component: components.Questions
 		}
 	]
 })

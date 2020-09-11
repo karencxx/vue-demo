@@ -32,6 +32,8 @@ import Lottie from '@/exercise/lottie'
 import review from '@/review'
 import Charging from '@/exercise/css/charging'
 import Collection from '@/exercise/css/collection'
+import Border from '@/exercise/css/border'
+import Questions from '@/exercise/css/50questions'
 export default {
 	HelloWorld,
 	Login,
@@ -65,5 +67,7 @@ export default {
 	review,
 	Charging,
 	Airplane,
-	Collection
+	Collection,
+	Border,
+	Questions
 }
