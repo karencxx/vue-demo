@@ -18,7 +18,7 @@
 		methods: {
 			setBarrageData() {
 		      let that = this;
-		      api.JH_news('/barrage/get', '')
+		      api.JH_news('/barrage/get', 'post')
 		        .then(res => {
 		          this.data = res.list;
 		        })
