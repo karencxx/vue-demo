@@ -10,6 +10,21 @@
 			</div>
 		</section>
 		<div class="scroll"></div>
+
+		<div @click="clickToConsole">
+			<ul class="color_list" @click.stop="clickToCurColor">
+				<li>red</li>
+				<li>orange</li>
+				<li>yellow</li>
+				<li>green</li>
+				<li>blue</li>
+			</ul>
+			<div class="box">box</div>
+		</div>
+
+		<div @click="clickToConsole">
+			<em>If you click on <code>EM</code>, the handler on <code>DIV</code> runs.</em>
+		</div>
 	</div>
 </template>
 <script>
@@ -24,7 +39,21 @@
 
 		},
 		methods: {
-			
+			clickToCurColor (e) {
+				console.log('111111')
+				// return false
+				e.target = e.currentTarget
+				let nodeName = e.target.nodeName.toLowerCase()
+				e.preventDefault();
+				e.stopPropagation();
+				
+				if(nodeName === 'li'){
+					document.querySelector('.box').style.backgroundColor = e.target.innerHTML
+				}
+			},
+			clickToConsole (e) {
+				console.log('222222')
+			}
 		}
 	}
 </script>
@@ -42,5 +71,42 @@
 		transform: translateX(10%);
 		position: fixed;
 		top: 0;
+	}
+
+	.color_list {
+		display: flex;
+
+		li {
+			width: 100px;
+			height: 100px;
+			list-style: none;
+			text-align: center;
+			line-height: 100px;
+			color: #fff;
+
+			&:nth-of-type(1) {
+				background-color: red;
+			}
+			&:nth-of-type(2) {
+				background-color: orange;
+			}
+			&:nth-of-type(3) {
+				background-color: yellow;
+			}
+			&:nth-of-type(4) {
+				background-color: green;
+			}
+			&:nth-of-type(5) {
+				background-color: blue;
+			}
+		}
+	}
+
+	.box {
+		width: 500px;
+		height: 100px;
+		background: #ccc;
+		line-height: 150px;
+		text-align: center;
 	}
 </style>

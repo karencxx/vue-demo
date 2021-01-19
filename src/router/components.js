@@ -34,6 +34,8 @@ import Charging from '@/exercise/css/charging'
 import Collection from '@/exercise/css/collection'
 import Border from '@/exercise/css/border'
 import Questions from '@/exercise/css/50questions'
+import Whatisvue from '@/code/whatisvue'
+import Turntable from '@/exercise/turntable'
 export default {
 	HelloWorld,
 	Login,
@@ -69,5 +71,7 @@ export default {
 	Airplane,
 	Collection,
 	Border,
-	Questions
+	Questions,
+	Whatisvue,
+	Turntable
 }

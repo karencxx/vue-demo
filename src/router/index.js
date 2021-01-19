@@ -104,12 +104,12 @@ const router = new Router({
 			alias: '上移置顶',
 			component: components.Scroll
 		},
-		// {
-		// 	path: '/myh5',
-		// 	name: 'myh5',
-		// 	alias: '移动web',
-		// 	component: components.Myh5
-		// },
+		{
+			path: '/myh5',
+			name: 'myh5',
+			alias: '移动web',
+			component: components.Myh5
+		},
 		{
 			path: '/mock',
 			name: 'mock',
@@ -223,6 +223,18 @@ const router = new Router({
 			name: 'question',
 			alias: '50个css基础问题',
 			component: components.Questions
+		},
+		{
+			path: '/whatisvue',
+			name: 'whatisvue',
+			alias: 'vue 解密',
+			component: components.Whatisvue
+		},
+		{
+			path: '/turntable',
+			name: 'turntable',
+			alias: '大转盘',
+			component: components.Turntable
 		}
 	]
 })

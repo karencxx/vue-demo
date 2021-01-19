@@ -54,10 +54,37 @@ const producerCarousel = function() {
 	}
 }
 
+const randomWord = function () {
+	let arr = [];
+	let num = [];
+	let id
+	function getId () {
+		return Random.integer(1,10)
+	}
+	for (let i = 0; i < 5; i++) {
+		do {
+			id = getId()
+		}while (num.includes(id))
+		num.push(id)
+		arr.push({
+			word: Random.word(),
+			id: num[i],
+			date: Random.now(),
+			isCheck: Random.boolean()
+		});
+	}
+
+	return {
+		list: arr
+	}
+}
+
 // Mock.mock( url, post/get, 返回的数据)
 Mock.mock('/news/index', 'post', producerNewsData);
 Mock.mock('/barrage/get', 'post', producerBarrage);
 Mock.mock('/carousel/get', 'post', producerCarousel);
+Mock.mock('/get/random', 'post', randomWord);
+Mock.mock('/get/check', 'post', Random.boolean());
 
 
 
