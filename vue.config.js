@@ -11,8 +11,8 @@ module.exports = {
         hot: true
     },
     css: {
-        modules: false, // 启用css modules
-        // extract: true, // 是否使用css分离插件
+        requireModuleExtension: false, // 启用css modules
+        extract: true, // 是否使用css分离插件
         sourceMap: false,
         loaderOptions: {
             less: {

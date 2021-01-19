@@ -12,7 +12,8 @@
     "test": "vue-cli-service build --mode dev",
     "pre": "vue-cli-service build --mode pre",
     "prod": "vue-cli-service build --mode prod",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
