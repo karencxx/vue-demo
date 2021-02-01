@@ -13,7 +13,8 @@
     "pre": "vue-cli-service build --mode pre",
     "prod": "vue-cli-service build --mode prod",
     "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib"
+    "lib": "vue-cli-service build --target lib",
+    "inspect": "vue-cli-service build inspect --mode dev"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -72,7 +73,7 @@
     "vue-loader": "^13.7.3",
     "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.41.5",
+    "webpack": "^5.19.0",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",

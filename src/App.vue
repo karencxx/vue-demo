@@ -9,7 +9,7 @@
     name: 'app',
   }
 </script>
-
 <style>
+@import './assets/css/common.less';
 
 </style>

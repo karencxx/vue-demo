@@ -36,6 +36,7 @@ import Border from '@/exercise/css/border'
 import Questions from '@/exercise/css/50questions'
 import Whatisvue from '@/code/whatisvue'
 import Turntable from '@/exercise/turntable'
+import Main from '@/optimization/main'
 export default {
 	HelloWorld,
 	Login,
@@ -73,5 +74,6 @@ export default {
 	Border,
 	Questions,
 	Whatisvue,
-	Turntable
+	Turntable,
+	Main
 }

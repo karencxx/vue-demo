@@ -235,6 +235,12 @@ const router = new Router({
 			name: 'turntable',
 			alias: '大转盘',
 			component: components.Turntable
+		},
+		{
+			path: '/optimization',
+			name: 'optimization',
+			alias: 'vue优化小技巧',
+			component: components.Main
 		}
 	]
 })
