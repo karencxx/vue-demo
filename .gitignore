@@ -18,3 +18,6 @@ my.pub
 package-lock.json
 test.sh
 /.deploy
+
+.env.local
+.env.*.local

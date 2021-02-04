@@ -1,3 +1,6 @@
+const path = require('path')
+const resolve = dir => path.join(__dirname, dir)
+
 module.exports = {
     publicPath: '/',
     outputDir: 'dist',
@@ -16,8 +19,33 @@ module.exports = {
         sourceMap: false,
         loaderOptions: {
             less: {
-                javascriptEnabled: true
+                javascriptEnabled: true,
+                globalVars: {
+                    global_prefix: 'ssss'
+                }
             }
+        }
+    },
+    chainWebpack: config => {
+        config
+        .plugin('html')
+        .tap(args => {
+            if(process.env.dev) {
+                args[0].template = './public/index.html'
+            }
+            return args
+        })
+
+        config.resolve.alias
+            .set('static', resolve('public/static'))
+            .set('@', resolve('src'))
+    },
+    configureWebpack: config => {
+        if(process.env.NODE_ENV === 'production') {
+            // 为生产环境修改配置
+        } else {
+        
+            // 为开发环境修改配置
         }
     }
 }

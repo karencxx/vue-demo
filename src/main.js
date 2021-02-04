@@ -22,17 +22,23 @@ Vue.use(iView)
 configComponents(Vue) //全局注册component
 
 Vue.config.devtools = true
-
+console.log(process.env, process.env.VUE_APP_API_ENV, 'env')
 /* eslint-disable no-new */
-new Vue({
+let app = new Vue({
   store, //inject store to all children
   // el: '#app',
   router,
   // template: '<App/>',
   // components: { App }
   render: h => h(App),
-}).$mount('#app')
+})
+let container = document.querySelector('#app')
+console.log(container, 'container')
+if(container) {
+  container.innerHTML = ''
+}
 
+app.$mount(container)
 //指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和vue实例。
 Vue.config.errorHandler = function(err, vm, info){
 
