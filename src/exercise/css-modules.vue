@@ -17,7 +17,7 @@
 			}
 		},
 		created() {
-			console.log(this.$style)
+			console.log(this.primaryColor)
 		}
 	}
 </script>
@@ -30,11 +30,16 @@
 		background: lightblue; 
 	}
 	:global(.bg777) {
-		background: #000;
+		background: #777;
 	}
 	.red {
 		/* 继承 组合class */
+		/* 必须位于其他规则之前 */
+		/* composes: classNameA classNameB; */
+		/* composes: className from "./style.css"; */
+		/* composes: globalClassName from global; */
 		composes: bg777; 
+		composes: bg777 colorGreen from '../../style.css' bg777 from global;
 		color: red;
 	}
 
