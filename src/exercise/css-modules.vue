@@ -3,6 +3,8 @@
 		<p :class="a.red">css modules</p>
 		<p class="bg777">css modules 全局</p>
 		<p :class="b.bg">css modules</p>
+		<!-- 会被b.bg覆盖 -->
+		<p :class="$style.bg1">无modules命名</p>
 		<div class="center">
 			<p class="p1">使用translate x/y定位中心</p>
 			<p>使用translate x/y定位中心</p>
@@ -17,7 +19,7 @@
 			}
 		},
 		created() {
-			console.log(this.primaryColor)
+			console.log(this.$style.bg1, this.a.primaryColor)
 		}
 	}
 </script>
@@ -52,6 +54,11 @@
 	/* 注入标识符 b */
 	.bg {
 		background: #999;
+	}
+</style>
+<style module>
+	.bg1 {
+		background: chocolate;
 	}
 </style>
 <style lang="less" scoped>
