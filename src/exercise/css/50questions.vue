@@ -66,6 +66,23 @@
         <div class="red-outer">
             <div class="red-inner">red inner</div>
         </div>
+        <h5>padding-top</h5>
+        <p style="background: #eee;">Another way to set an image's aspect ratio is through image attributes. If you know the dimensions of the image ahead of time, it is a best practice to set these dimensions as its width and height.   
+For our example above, knowing the dimensions are 800px by 600px, the image markup would look like: <img src="image.jpg" alt="..." width="800" height="600">. If the image sent has the same aspect ratio, but not necessarily those exact pixel values, we could still use image attribute values to set the ratio, combined with a style of width: 100% so that the image takes up the proper space. All together that would look like:
+        </p>
+        <div class="container">
+            <img class="media" src="https://staticimg.ngmm365.com/f2455021b1ecdf9f4cba5062898c7da6-w601_h601.JPG" alt="">
+        </div>
+        <p style="background: #777;">Another way to set an image's aspect ratio is through image attributes. If you know the dimensions of the image ahead of time, it is a best practice to set these dimensions as its width and height.   
+For our example above, knowing the dimensions are 800px by 600px, the image markup would look like: <img src="image.jpg" alt="..." width="800" height="600">. If the image sent has the same aspect ratio, but not necessarily those exact pixel values, we could still use image attribute values to set the ratio, combined with a style of width: 100% so that the image takes up the proper space. All together that would look like:
+        </p>
+        <h5>aspect-ratio</h5>
+        <div class="container2">
+            <img class="media" src="https://staticimg.ngmm365.com/f2455021b1ecdf9f4cba5062898c7da6-w601_h601.JPG" alt="">
+        </div>
+        <p>Another way to set an image's aspect ratio is through image attributes. If you know the dimensions of the image ahead of time, it is a best practice to set these dimensions as its width and height.   
+For our example above, knowing the dimensions are 800px by 600px, the image markup would look like: <img src="image.jpg" alt="..." width="800" height="600">. If the image sent has the same aspect ratio, but not necessarily those exact pixel values, we could still use image attribute values to set the ratio, combined with a style of width: 100% so that the image takes up the proper space. All together that would look like:
+        </p>
     </section>
 </template>
 <style lang="less" scoped>
@@ -171,5 +188,38 @@ td {
     margin-top: 10px;
     overflow: hidden;
     background: red;
+}
+
+.container {
+    // display: none;
+    position: relative;
+    width: 100%;
+    padding-top: 75%; // 16:9 
+    background: #000;
+    object-fit: contain;
+
+    .media {
+        position: absolute;
+        top: 0;
+        width: inherit;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.container2 {
+    display: none;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #000;
+    object-fit: contain;
+
+    .media {
+        position: absolute;
+        top: 0;
+        width: inherit;
+        // aspect-ratio: 8 / 6;
+    }
 }
 </style>
