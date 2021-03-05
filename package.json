@@ -1,35 +1,36 @@
 {
   "name": "vue-demo",
   "version": "1.2.0",
+  "private": true,
   "description": "A Vue.js project",
   "author": "caixiaoxiao <caixiaoxiao@ngmm365.com>",
-  "private": true,
   "scripts": {
-    "start": "npm run dev",
-    "dev": "npm run serve",
     "serve": "vue-cli-service serve --mode dev",
     "build": "vue-cli-service build --mode dev",
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve",
+    "inspect": "vue-cli-service build inspect --mode dev",
+    "lib": "vue-cli-service build --target lib",
     "pre": "vue-cli-service build --mode pre",
     "prod": "vue-cli-service build --mode prod",
-    "lint": "vue-cli-service lint",
-    "lib": "vue-cli-service build --target lib",
-    "inspect": "vue-cli-service build inspect --mode dev",
+    "start": "npm run dev",
     "test": "jest"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "clean-webpack-plugin": "^0.1.19",
-    "iview": "^2.14.3",
     "mobx": "^5.9.0",
     "splitting": "^1.0.6",
-    "vue": "^2.5.17",
+    "vue": "^3.0.4",
     "vue-lottie": "^0.2.1",
     "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vuex": "^4.0.0-alpha.1",
+    "view-design": "^4.0.0"
   },
   "devDependencies": {
     "@vue/cli": "^4.5.11",
-    "@vue/cli-service": "^4.5.11",
+    "@vue/cli-service": "^5.0.0-alpha.4",
+    "@vue/compiler-sfc": "^3.0.0-beta.1",
     "autoprefixer": "^7.2.6",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
@@ -70,20 +71,18 @@
     "vue-jest": "^1.4.0",
     "vue-loader": "^13.7.3",
     "vue-style-loader": "^3.1.2",
-    "vue-template-compiler": "^2.6.12",
-    "webpack": "^4.41.5",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.1.4"
   },
-  "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  }
 }

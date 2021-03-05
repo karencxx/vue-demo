@@ -12,7 +12,7 @@
 import api from '@/axios/api'
 import Vue from 'vue'
 import testComp from './test-comp'
-export default Vue.extend({
+export default {
     components:{
         testComp
     },
@@ -41,5 +41,5 @@ export default Vue.extend({
             })
         }
     }
-})
+}
 </script>

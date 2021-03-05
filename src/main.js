@@ -1,16 +1,16 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+import Vue, { h } from 'vue';
 import App from './App'
 import router from './router'
 import store from './vuex/store'
 import directives from './directives/index'
-import iView from 'iview'
+import ViewUI from 'view-design'
 import axios from 'axios'
-import configComponents from './config-components' 
-import 'iview/dist/styles/iview.css'
+import configComponents from './config-components'
+import 'view-design/dist/styles/iview.css'
+import './theme/index.less';
 
-Vue.config.productionTip = false
 Vue.config.slient = false //取消Vue所有的日志与警告
 
 require('./mock.js') //引入mock.js
@@ -18,7 +18,7 @@ Vue.prototype.$http = axios
 
 Vue.use(router)
 Vue.use(directives)
-Vue.use(iView)
+// Vue.use(ViewUI)
 configComponents(Vue) //全局注册component
 
 Vue.config.devtools = true
@@ -30,7 +30,7 @@ let app = new Vue({
   router,
   // template: '<App/>',
   // components: { App }
-  render: h => h(App),
+  render: () => h(App),
 })
 let container = document.querySelector('#app')
 console.log(container, 'container')

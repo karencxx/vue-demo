@@ -17,3 +17,9 @@ position absolute fixed
 可以阻止元素被浮动元素覆盖
 可以包含浮动元素--清除内部浮动
 分属于不同的BFC时可以阻止margin重叠
+
+update to Vue 3.0
+update latest @vue/cli
+vue add vue-next
+
+vite 

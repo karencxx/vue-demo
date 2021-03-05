@@ -10,7 +10,7 @@
 <script>
 import api from '@/axios/api'
 import Vue from 'vue'
-export default Vue.extend({
+export default {
     props: ['data'],
 
     data() {
@@ -25,7 +25,7 @@ export default Vue.extend({
             this.isCheck = res;
         })
     }
-})
+}
 </script>
 <style lang="less" scoped>
 div {
