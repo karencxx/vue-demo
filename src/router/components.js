@@ -37,6 +37,7 @@ import Questions from '@/exercise/css/50questions'
 import Whatisvue from '@/code/whatisvue'
 import Turntable from '@/exercise/turntable'
 import Main from '@/optimization/main'
+import Dragon from '@/exercise/dragon'
 export default {
 	HelloWorld,
 	Login,
@@ -75,5 +76,6 @@ export default {
 	Questions,
 	Whatisvue,
 	Turntable,
-	Main
+	Main,
+	Dragon
 }

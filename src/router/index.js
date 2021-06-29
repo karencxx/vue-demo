@@ -242,6 +242,12 @@ const router = new Router({
 			name: 'optimization',
 			alias: 'vue优化小技巧',
 			component: components.Main
+		},
+		{
+			path: '/dragon',
+			name: 'dragon',
+			alias: '画龙',
+			component: components.Dragon
 		}
 	]
 })

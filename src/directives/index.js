@@ -11,7 +11,7 @@ const focus = Vue.directive('focus', {
 	}
 })
 
-export default {
-	focus
-}
+// export default {
+// 	focus
+// }
 
